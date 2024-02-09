@@ -30,4 +30,32 @@ git rebase upstream/master
 4. Resolva os conflitos, se houver!
 
 ## Guia de Desenvolvimento
+
+### Ubuntu
+1. Instale o Docker completo:<br>
+https://docs.docker.com/engine/install/ubuntu/
+
+2. Instale outras dependências:
+```bash
+apt install gnome-keyring
+apt install git
+```
+
+3. Clone este repositório:
+```bash
+cd ~
+git clone https://github.com/neorix-tecnologia/neo-grafana.git
+cd neo-grafana
+```
+
+4. Construa a imagem do Docker:
+```bash
+make build-docker-full
+```
+
+5. Export a imagem do Docker:
+```bash
+docker image ls
+```
+
 https://github.com/grafana/grafana/blob/HEAD/contribute/developer-guide.md
